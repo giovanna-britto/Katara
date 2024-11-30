@@ -177,7 +177,7 @@ O Canvas de Proposta de Valor é uma ferramenta de design estratégico que ajuda
 ### Arquitetura da solução
 
     
-![Texto alternativo](./assets/arquitetura.jpeg)
+![Texto alternativo](./assets/arquitetura_solucao.jpeg)
 
 Fonte: Material produzido pelo grupo Katara.
 
@@ -294,6 +294,10 @@ A solução utiliza dispositivos IoT para coletar dados diretamente do solo, que
 ### Arquitetura de IoT - Katara
 
 A arquitetura de IoT da Katara é projetada para coletar dados do solo em tempo real, processá-los e disponibilizá-los para análise e tomada de decisão. Essa estrutura combina sensores, um microcontrolador ESP-32, e integração com a nuvem por meio do HiveMQ.
+
+![Texto alternativo](./assets/arquitetura.jpeg)
+
+Fonte: Material produzido pelo grupo Katara.
 
 ---
 
@@ -423,6 +427,10 @@ Fonte: Material produzido pelo grupo Katara.
 ### 🧠 Arquitetura da AI
 
 A arquitetura da AI utilizada na Katara combina modelos avançados de linguagem (GPT-4), ferramentas de recuperação de informações (RAG - Retrieval-Augmented Generation) e APIs externas para fornecer recomendações robustas e contextualizadas. Um dos principais diferenciais é o uso do *React Agent*, que faz múltiplas iterações para validar as informações e garantir a melhor resposta possível.
+
+![Texto alternativo](./assets/arquitetura_ia.jpeg)
+
+Fonte: Material produzido pelo grupo Katara.
 
 #### *Componentes da Arquitetura*
 
