@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dados_plantacao_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Seja\nBem - Vindo',
+              'Seja\nBem-Vindo',
               style: TextStyle(
                 color: Colors.blue,
                 fontSize: 28,
@@ -58,13 +57,7 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Navega para a próxima tela (dados das plantações)
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DadosPlantacaoScreen(),
-                    ),
-                  );
+                  Navigator.pushReplacementNamed(context, '/dados');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

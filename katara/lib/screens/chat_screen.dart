@@ -66,6 +66,36 @@ class ChatScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.blue[50], // Fundo azul
+
+      // Barra de navegação na parte inferior
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0, // Define o índice inicial como 0 (Início)
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Início',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bar_chart),
+            label: 'Dashboard',
+          ),
+        ],
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.pushReplacementNamed(context, '/home');
+          } else if (index == 1) {
+            Navigator.pushReplacementNamed(context, '/chat');
+          } else if (index == 2) {
+            Navigator.pushReplacementNamed(context, '/dashboard');
+          }
+        },
+      ),
     );
   }
 }
