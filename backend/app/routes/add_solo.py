@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, UploadFile, Form
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import SQLAlchemyError
 from app.config.settings import engine, solo_table, cloudinary
+import cloudinary.uploader
 
 router = APIRouter()
 
