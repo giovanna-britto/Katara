@@ -1,8 +1,7 @@
 from fastapi import APIRouter, HTTPException, UploadFile, Form
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import SQLAlchemyError
-from app.db.models import solo_table, engine
-import cloudinary.uploader
+from app.config.settings import engine, solo_table, cloudinary
 
 router = APIRouter()
 
@@ -41,6 +40,6 @@ async def add_solo(
             status_code=201,
         )
     except SQLAlchemyError as e:
-        return HTTPException(status_code=500, detail=f"Erro no banco de dados: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Erro no banco de dados: {str(e)}")
     except Exception as e:
-        return HTTPException(status_code=500, detail=f"Erro: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Erro: {str(e)}")

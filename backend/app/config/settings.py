@@ -1,12 +1,20 @@
+import os
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
+from dotenv import load_dotenv
+import cloudinary
 
-DB_HOST = "dpg-ct51vrqlqhvc73a6he50-a.oregon-postgres.render.com"
-DB_PORT = "5432"
-DB_NAME = "katara"
-DB_USER = "katara_user"
-DB_PASSWORD = "IZNt1eGb0GEukZqq354aZZUJQuMejWdV"
-DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+load_dotenv()  # Carregar as variáveis de ambiente do arquivo .env
 
+# Configurações do Cloudinary
+cloudinary.config(
+    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.getenv("CLOUDINARY_API_KEY"),
+    api_secret=os.getenv("CLOUDINARY_API_SECRET"),
+    secure=True
+)
+
+# Configurações do Banco de Dados
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 metadata = MetaData()
 
@@ -21,3 +29,4 @@ solo_table = Table(
     Column("imagem", String(255), nullable=False),
     Column("id_dispositivo", String(255), nullable=False),
 )
+
