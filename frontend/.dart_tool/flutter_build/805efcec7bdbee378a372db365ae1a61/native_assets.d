@@ -1,0 +1,1 @@
+ C:\\Users\\Inteli\\Documents\\hackas\\Katara\\frontend\\.dart_tool\\flutter_build\\805efcec7bdbee378a372db365ae1a61\\native_assets.yaml: 
